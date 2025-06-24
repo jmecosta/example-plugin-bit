@@ -8,13 +8,15 @@
         <param name="atlassian-data-center-compatible">true</param>
     </plugin-info>
 
+    <resource type="i18n" name="i18n" location="i18n/teamcity-trigger-hook"/>
+
     <rest-migration key="rest-migration-key">
         <rest-v2/>
     </rest-migration>
 
-    <rest key="rest-key" path="/ecohelp" version="1.0" >
-        <description>ECOHELP Resource Class</description>
+    <rest key="rest-key" path="/teamcity" version="1.0" >
+        <description>Teamcity Resource Class</description>
         <package>com.atlassian.ecohelp.rest</package>
-    </rest>
+    </rest>    
 
 </atlassian-plugin>

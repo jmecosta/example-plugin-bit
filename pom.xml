@@ -74,7 +74,13 @@
             <artifactId>atlassian-plugins-osgi-javaconfig</artifactId>
             <version>${atlassian-plugins-osgi-javaconfig.version}</version>
         </dependency>
-
+        
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -110,12 +116,26 @@
                     </instructions>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.atlassian.plugin</groupId>
+                <artifactId>atlassian-spring-scanner-maven-plugin</artifactId>
+                <version>${atlassian.spring.scanner.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>atlassian-spring-scanner</goal>
+                        </goals>
+                        <phase>process-classes</phase>
+                    </execution>
+                </executions>
+            </plugin>            
         </plugins>
     </build>
 
     <properties>
         <platform.version>7.3.12</platform.version>
         <bitbucket.version>9.6.3</bitbucket.version>
+        <atlassian.spring.scanner.version>6.0.0</atlassian.spring.scanner.version>
         <atlassian-plugins-osgi-javaconfig.version>0.6.0</atlassian-plugins-osgi-javaconfig.version>
         <amps.version>9.3.3</amps.version>
         <atlassian.plugin.key>com-atlassian-jrichards-ecohelp</atlassian.plugin.key>

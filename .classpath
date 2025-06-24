@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="var" path="M2_REPO/com/atlassian/bitbucket/server/bitbucket-api/9.6.3/bitbucket-api-9.6.3.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/atlassian/bitbucket/server/bitbucket-api/9.6.3/bitbucket-api-9.6.3-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/atlassian/analytics/analytics-api/9.2.7/analytics-api-9.2.7.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/atlassian/analytics/analytics-api/9.2.7/analytics-api-9.2.7-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/atlassian/audit/atlassian-audit-api/2.0.9/atlassian-audit-api-2.0.9.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/atlassian/annotations/atlassian-annotations/5.1.1/atlassian-annotations-5.1.1.jar" sourcepath="M2_REPO/com/atlassian/annotations/atlassian-annotations/5.1.1/atlassian-annotations-5.1.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/atlassian/annotations/atlassian-annotations/5.1.1/atlassian-annotations-5.1.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/atlassian/crowd/embedded-crowd-api/6.2.3/embedded-crowd-api-6.2.3.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/atlassian/crowd/embedded-crowd-api/6.2.3/embedded-crowd-api-6.2.3-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/atlassian/event/atlassian-event/6.0.0/atlassian-event-6.0.0.jar" sourcepath="M2_REPO/com/atlassian/event/atlassian-event/6.0.0/atlassian-event-6.0.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/atlassian/event/atlassian-event/6.0.0/atlassian-event-6.0.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/atlassian/extras/atlassian-extras-api/3.4.6/atlassian-extras-api-3.4.6.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/atlassian/extras/atlassian-extras-api/3.4.6/atlassian-extras-api-3.4.6-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar" sourcepath="M2_REPO/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar" sourcepath="M2_REPO/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar" sourcepath="M2_REPO/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar" sourcepath="M2_REPO/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar" sourcepath="M2_REPO/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar" sourcepath="M2_REPO/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar" sourcepath="M2_REPO/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar" sourcepath="M2_REPO/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar" sourcepath="M2_REPO/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/hibernate/validator/hibernate-validator/6.2.5.Final/hibernate-validator-6.2.5.Final.jar" sourcepath="M2_REPO/org/hibernate/validator/hibernate-validator/6.2.5.Final/hibernate-validator-6.2.5.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar" sourcepath="M2_REPO/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar" sourcepath="M2_REPO/com/fasterxml/classmate/1.5.1/classmate-1.5.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/atlassian/bitbucket/server/bitbucket-rest-v2-api/9.6.3/bitbucket-rest-v2-api-9.6.3.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/atlassian/bitbucket/server/bitbucket-rest-v2-api/9.6.3/bitbucket-rest-v2-api-9.6.3-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/atlassian/sal/sal-api/6.0.5/sal-api-6.0.5.jar" sourcepath="M2_REPO/com/atlassian/sal/sal-api/6.0.5/sal-api-6.0.5-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/atlassian/sal/sal-api/6.0.5/sal-api-6.0.5-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/osgi/osgi.core/8.0.0/osgi.core-8.0.0.jar" sourcepath="M2_REPO/org/osgi/osgi.core/8.0.0/osgi.core-8.0.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/org/osgi/osgi.core/8.0.0/osgi.core-8.0.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-context/5.3.39-atlassian-4/spring-context-5.3.39-atlassian-4.jar" sourcepath="M2_REPO/org/springframework/spring-context/5.3.39-atlassian-4/spring-context-5.3.39-atlassian-4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/org/springframework/spring-context/5.3.39-atlassian-4/spring-context-5.3.39-atlassian-4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-aop/5.3.39-atlassian-4/spring-aop-5.3.39-atlassian-4.jar" sourcepath="M2_REPO/org/springframework/spring-aop/5.3.39-atlassian-4/spring-aop-5.3.39-atlassian-4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/org/springframework/spring-aop/5.3.39-atlassian-4/spring-aop-5.3.39-atlassian-4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-beans/5.3.39-atlassian-4/spring-beans-5.3.39-atlassian-4.jar" sourcepath="M2_REPO/org/springframework/spring-beans/5.3.39-atlassian-4/spring-beans-5.3.39-atlassian-4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/org/springframework/spring-beans/5.3.39-atlassian-4/spring-beans-5.3.39-atlassian-4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-core/5.3.39-atlassian-4/spring-core-5.3.39-atlassian-4.jar" sourcepath="M2_REPO/org/springframework/spring-core/5.3.39-atlassian-4/spring-core-5.3.39-atlassian-4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/org/springframework/spring-core/5.3.39-atlassian-4/spring-core-5.3.39-atlassian-4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-jcl/5.3.39-atlassian-4/spring-jcl-5.3.39-atlassian-4.jar" sourcepath="M2_REPO/org/springframework/spring-jcl/5.3.39-atlassian-4/spring-jcl-5.3.39-atlassian-4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/org/springframework/spring-jcl/5.3.39-atlassian-4/spring-jcl-5.3.39-atlassian-4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-expression/5.3.39-atlassian-4/spring-expression-5.3.39-atlassian-4.jar" sourcepath="M2_REPO/org/springframework/spring-expression/5.3.39-atlassian-4/spring-expression-5.3.39-atlassian-4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/org/springframework/spring-expression/5.3.39-atlassian-4/spring-expression-5.3.39-atlassian-4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/jakarta/ws/rs/jakarta.ws.rs-api/2.1.6/jakarta.ws.rs-api-2.1.6.jar" sourcepath="M2_REPO/jakarta/ws/rs/jakarta.ws.rs-api/2.1.6/jakarta.ws.rs-api-2.1.6-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/2.1.6/jakarta.ws.rs-api-2.1.6-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/jakarta/inject/jakarta.inject-api/1.0.5/jakarta.inject-api-1.0.5.jar" sourcepath="M2_REPO/jakarta/inject/jakarta.inject-api/1.0.5/jakarta.inject-api-1.0.5-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/jakarta/inject/jakarta.inject-api/1.0.5/jakarta.inject-api-1.0.5-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/atlassian/plugins/atlassian-plugins-osgi-javaconfig/0.6.0/atlassian-plugins-osgi-javaconfig-0.6.0.jar" sourcepath="M2_REPO/com/atlassian/plugins/atlassian-plugins-osgi-javaconfig/0.6.0/atlassian-plugins-osgi-javaconfig-0.6.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/jorge/.m2/repository/com/atlassian/plugins/atlassian-plugins-osgi-javaconfig/0.6.0/atlassian-plugins-osgi-javaconfig-0.6.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+</classpath>
