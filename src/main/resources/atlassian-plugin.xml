@@ -1,0 +1,20 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+        <param name="atlassian-data-center-compatible">true</param>
+    </plugin-info>
+
+    <rest-migration key="rest-migration-key">
+        <rest-v2/>
+    </rest-migration>
+
+    <rest key="rest-key" path="/ecohelp" version="1.0" >
+        <description>ECOHELP Resource Class</description>
+        <package>com.atlassian.ecohelp.rest</package>
+    </rest>
+
+</atlassian-plugin>
