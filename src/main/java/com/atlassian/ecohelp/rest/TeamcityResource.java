@@ -27,6 +27,7 @@ import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
 import com.atlassian.bitbucket.i18n.I18nService;
 
 import com.atlassian.bitbucket.rest.v2.api.resolver.RepositoryResolver;
+import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
 
 
 import javax.inject.Inject;
@@ -34,15 +35,17 @@ import javax.inject.Inject;
 @Path(ResourcePatterns.REPOSITORY_URI)
 public class TeamcityResource {
 
+    private final RepositoryResolver repositoryResolver;
+
     /**
      * Creates Rest resource for testing the Jenkins configuration
      *
      * @param i18nService i18n Service
      */
-    //@Inject
-    //public TeamcityResource(final TeamcityConnectionSettings connectionSettings) {
-    //    this.connectionSettings = connectionSettings;
-    //}
+    @Inject
+    public TeamcityResource(@ComponentImport final RepositoryResolver repositoryResolver) {
+        this.repositoryResolver = repositoryResolver;
+    }
 
 
 
@@ -91,6 +94,9 @@ public class TeamcityResource {
     return Response.ok(getResourceAsFile("public/" + img), MediaType.APPLICATION_OCTET_STREAM).header("Content-Disposition", "attachment; filename=\"" + img + "\"").build();
   }  
 
+  /**
+   * curl --verbose --silent --user admin:admin --request GET --url 'http://localhost:7990/bitbucket/rest/teamcity/latest/projects/PROJECT_1/repos/rep_1/loadcss?page=index.js'  --header 'X-Atlassian-Token: no-check'
+   */
   @GET
   @Path(value = "loadcss")
   @Produces("text/css")
@@ -101,6 +107,10 @@ public class TeamcityResource {
     return file;
   }
 
+   /*
+    * test with 
+    curl --verbose --silent --user admin:admin --request GET --url 'http://localhost:7990/bitbucket/rest/teamcity/latest/projects/PROJECT_1/repos/rep_1/testconnection?url=asdas&username=asdas&password=asdas&debugon=asdas' --header 'X-Atlassian-Token: no-check'
+    */
   /**
    * Trigger a build on the Teamcity instance using vcs root
    *
@@ -114,14 +124,13 @@ public class TeamcityResource {
   @Path(value = "testconnection")
   @Produces("text/plain; charset=UTF-8")
   public Response testconnection(
-          @BeanParam final RepositoryResolver repositoryResolver,
           @QueryParam("url") final String url,
           @QueryParam("username") final String username,
           @QueryParam("password") final String password,
           @QueryParam("debugon") final String isDebugOn) {
 
         return Response.ok()
-                .entity(repositoryResolver.getRepository())
+                .entity(this.repositoryResolver.getRepository())
                 .type(MediaType.APPLICATION_JSON)
                 .build();
   }  
