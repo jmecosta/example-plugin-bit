@@ -21,5 +21,7 @@
     <osgi:reference id="hookService" interface="com.atlassian.bitbucket.hook.repository.RepositoryHookService"/>
     <osgi:reference id="userService" interface="com.atlassian.bitbucket.user.UserService"/>
     <osgi:reference id="projectService" interface="com.atlassian.bitbucket.project.ProjectService"/>
+    <osgi:reference id="pluginsSettingsFactory" interface="com.atlassian.sal.api.pluginsettings.PluginSettingsFactory"/>
+    <osgi:reference id="securityService" interface="com.atlassian.bitbucket.user.SecurityService"/>
     <context:component-scan base-package="com.trimble.tekla"/>
 </beans>   

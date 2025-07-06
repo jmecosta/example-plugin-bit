@@ -40,6 +40,12 @@
         </dependency>
         <dependency>
             <groupId>com.atlassian.bitbucket.server</groupId>
+            <artifactId>bitbucket-spi</artifactId>
+            <version>${bitbucket.version}</version>
+            <scope>provided</scope>
+        </dependency>        
+        <dependency>
+            <groupId>com.atlassian.bitbucket.server</groupId>
             <artifactId>bitbucket-rest-v2-api</artifactId>
             <version>${bitbucket.version}</version>
             <scope>provided</scope>
@@ -74,7 +80,12 @@
             <artifactId>atlassian-plugins-osgi-javaconfig</artifactId>
             <version>${atlassian-plugins-osgi-javaconfig.version}</version>
         </dependency>
-        
+        <dependency>
+            <groupId>com.atlassian.plugin</groupId>
+            <artifactId>atlassian-spring-scanner-runtime</artifactId>
+            <version>2.1.16</version>
+            <scope>provided</scope>
+        </dependency>        
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
@@ -86,7 +97,13 @@
             <artifactId>atlassian-spring-scanner-annotation</artifactId>
             <scope>provided</scope>
         </dependency>
-
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>1.19.4</version>
+            <scope>compile</scope>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 
     <build>

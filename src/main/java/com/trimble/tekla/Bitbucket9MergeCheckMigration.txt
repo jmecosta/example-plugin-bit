@@ -1,0 +1,21 @@
+Bitbucket 9.x and later removed the old merge check API (RepositoryMergeCheck, PreRepositoryHookContext, PullRequestMergeHookRequest).
+
+You must use the new MergeRequestCheck interface from com.atlassian.bitbucket.hook.repository, which looks like:
+
+public interface MergeRequestCheck {
+    void check(@Nonnull MergeRequestCheckContext context, @Nonnull MergeRequest request);
+}
+
+- The check method does not return a value. Instead, you call context.veto(summary, details) to reject the merge, or do nothing to allow it.
+- You get the PullRequest via request.getPullRequest().
+- You get the Repository via request.getToRef().getRepository().
+
+Update your AreBuildsInQueueOrRunningCheck.java:
+- Change implements RepositoryMergeCheck to implements MergeRequestCheck
+- Change the method to:
+  @Override
+  public void check(@Nonnull MergeRequestCheckContext context, @Nonnull MergeRequest request)
+- Replace all RepositoryHookResult.rejected(...) with context.veto(...)
+- Remove all RepositoryHookResult.accepted() (just return from the method)
+
+You will also need to update your imports to use MergeRequestCheck, MergeRequestCheckContext, and MergeRequest from com.atlassian.bitbucket.hook.repository.

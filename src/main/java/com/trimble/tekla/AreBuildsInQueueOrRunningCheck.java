@@ -13,7 +13,6 @@ import com.atlassian.bitbucket.i18n.I18nService;
 import com.atlassian.bitbucket.pull.PullRequest;
 import com.atlassian.bitbucket.repository.Repository;
 import com.atlassian.bitbucket.setting.Settings;
-import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
 
 import java.io.IOException;
 import java.util.List;
@@ -21,10 +20,6 @@ import java.util.Optional;
 import javax.annotation.Nonnull;
 import javax.inject.Inject;
 import com.atlassian.sal.api.pluginsettings.PluginSettingsFactory;
-import com.trimble.tekla.HttpConnector;
-import com.trimble.tekla.TeamcityConfiguration;
-import com.trimble.tekla.TeamcityConnector;
-import com.trimble.tekla.TeamcityLogger;
 import com.atlassian.bitbucket.user.SecurityService;
 import com.atlassian.bitbucket.hook.repository.RepositoryHookService;
 
@@ -41,10 +36,10 @@ public class AreBuildsInQueueOrRunningCheck implements RepositoryMergeCheck {
 
   @Inject
   public AreBuildsInQueueOrRunningCheck(
-    @ComponentImport I18nService i18nService,
-    @ComponentImport PluginSettingsFactory pluginSettingsFactory,
-    @ComponentImport RepositoryHookService hookService,
-    @ComponentImport SecurityService securityService) {
+    I18nService i18nService,
+    PluginSettingsFactory pluginSettingsFactory,
+    RepositoryHookService hookService,
+    SecurityService securityService) {
       this.connectionSettings = new TeamcityConnectionSettings(pluginSettingsFactory);
       this.settingsService = new SettingsService(hookService, securityService);    
       this.i18nService = i18nService;

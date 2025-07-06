@@ -1,0 +1,67 @@
+{namespace com.trimble.tekla.teamcity}
+
+/**
+ * Renders Connection tab contents in hook configuration user interface
+ *
+ * @param config
+ * @param errors
+ */
+{template .connectionTab}
+    {call aui.group.group}
+        {param content}
+            {call aui.form.textField}
+                {param id: 'bitbucketUrl' /}
+                {param fieldWidth: 'long' /}
+                {param value: $config['bitbucketUrl'] /}
+                {param labelContent: getText('connetion.bitbucket.url') /}
+                {param errorTexts: $errors['bitbucketUrl'] /}
+                {param isRequired: true /}
+            {/call}
+        {/param}
+    {/call}
+    {call aui.group.group}
+        {param content}
+            {call aui.form.textField}
+                {param id: 'teamCityUrl' /}
+                {param fieldWidth: 'long' /}
+                {param value: $config['teamCityUrl'] /}
+                {param labelContent: getText('connetion.teamcity.url') /}
+                {param errorTexts: $errors['teamCityUrl'] /}
+                {param isRequired: true /}
+            {/call}
+            {call aui.form.textField}
+                {param id: 'teamCityUserName' /}
+                {param fieldWidth: 'medium' /}
+                {param value: $config['teamCityUserName'] /}
+                {param labelContent: getText('connetion.teamcity.username') /}
+                {param errorTexts: $errors['teamCityUserName'] /}
+                {param isRequired: true /}
+            {/call}
+            {call aui.form.passwordField}
+                {param id: 'teamCityPassword' /}
+                {param fieldWidth: 'medium' /}
+                {param value: $config['teamCityPassword'] /}
+                {param labelContent: getText('connetion.teamcity.password') /}
+                {param errorTexts: $errors['teamCityPassword'] /}
+                {param isRequired: true /}
+            {/call}
+            {call aui.form.field}
+                {param id: 'testTeamCityConnection' /}
+                {param type: 'button' /}
+                {param value: getText('connetion.test.button') /}
+                {param descriptionText: getText('connetion.test.button.info') /}
+            {/call}
+            {call .toggle}
+                {param id: 'isDebugEnabled' /}
+                {param value: $config['isDebugEnabled'] /}
+                {param labelText: getText('connetion.debug') /}
+            {/call}
+        {/param}
+    {/call}
+    {call aui.message.info}
+        {param content}
+            <p>{getText('triggers.info')}</p>
+            <p><a href="https://github.com/TrimbleSolutionsCorporation/TeamcityTriggerHook" target="_blank">{getText('triggers.info.more')}</a></p>
+        {/param}
+    {/call}
+{/template}
