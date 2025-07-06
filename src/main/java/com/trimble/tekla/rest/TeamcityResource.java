@@ -1,4 +1,4 @@
-package com.atlassian.ecohelp.rest;
+package com.trimble.tekla.rest;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -12,42 +12,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.BeanParam;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
 
 import com.atlassian.bitbucket.rest.v2.api.resolver.RepositoryResolver;
 import com.atlassian.bitbucket.rest.v2.api.util.ResourcePatterns;
-import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
-import com.atlassian.bitbucket.i18n.I18nService;
-
-import com.atlassian.bitbucket.rest.v2.api.resolver.RepositoryResolver;
-import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
-
-
-import javax.inject.Inject;
 
 @Path(ResourcePatterns.REPOSITORY_URI)
 public class TeamcityResource {
-
-    private final RepositoryResolver repositoryResolver;
-
-    /**
-     * Creates Rest resource for testing the Jenkins configuration
-     *
-     * @param i18nService i18n Service
-     */
-    @Inject
-    public TeamcityResource(@ComponentImport final RepositoryResolver repositoryResolver) {
-        this.repositoryResolver = repositoryResolver;
-    }
-
-
 
     /*
         curl --verbose --silent --user admin:admin --request GET --url 'http://localhost:7990/bitbucket/rest/ecohelp/1.0/hello' --header 'Accept: application/json' --header 'X-Atlassian-Token: no-check'
@@ -124,13 +95,14 @@ public class TeamcityResource {
   @Path(value = "testconnection")
   @Produces("text/plain; charset=UTF-8")
   public Response testconnection(
+          @BeanParam  RepositoryResolver repositoryResolver, 
           @QueryParam("url") final String url,
           @QueryParam("username") final String username,
           @QueryParam("password") final String password,
           @QueryParam("debugon") final String isDebugOn) {
 
         return Response.ok()
-                .entity(this.repositoryResolver.getRepository())
+                .entity(repositoryResolver.getRepository())
                 .type(MediaType.APPLICATION_JSON)
                 .build();
   }  

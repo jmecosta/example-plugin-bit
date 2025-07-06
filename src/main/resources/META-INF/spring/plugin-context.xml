@@ -16,6 +16,10 @@
 
     <osgi:reference id="i18nService" interface="com.atlassian.bitbucket.i18n.I18nService"/>
     <osgi:reference id="repositoryService" interface="com.atlassian.bitbucket.repository.RepositoryService"/>
+    <osgi:reference id="pullRequestService" interface="com.atlassian.bitbucket.pull.PullRequestService"/>
+    <osgi:reference id="commitService" interface="com.atlassian.bitbucket.commit.CommitService"/>
+    <osgi:reference id="hookService" interface="com.atlassian.bitbucket.hook.repository.RepositoryHookService"/>
+    <osgi:reference id="userService" interface="com.atlassian.bitbucket.user.UserService"/>
     <osgi:reference id="projectService" interface="com.atlassian.bitbucket.project.ProjectService"/>
     <context:component-scan base-package="com.trimble.tekla"/>
 </beans>   

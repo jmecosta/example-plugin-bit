@@ -5,7 +5,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.atlassian.ecohelp</groupId>
+    <groupId>com.trimble.tekla</groupId>
     <artifactId>server</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
@@ -14,8 +14,8 @@
         <url>https://atlassian.com/</url>
     </organization>
 
-    <name>com-atlassian-jrichards-ecohelp</name>
-    <description>Testing for ECOHELP tickets</description>
+    <name>com-trimble-tekla-TeamcityTrigger</name>
+    <description>Teamcity Trigger Hook</description>
     <packaging>atlassian-plugin</packaging>
 
     <dependencyManagement>
@@ -81,6 +81,12 @@
             <version>1</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.atlassian.plugin</groupId>
+            <artifactId>atlassian-spring-scanner-annotation</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -113,8 +119,11 @@
                         <Export-Package/>
                         <Import-Package>
                             com.atlassian.bitbucket.project.*;resolution:="optional",
+                            com.atlassian.bitbucket.hook.repository;resolution:="optional",
+                            com.atlassian.bitbucket.pull;resolution:="optional",
                             com.atlassian.bitbucket.repository.*;resolution:="optional",
                             com.atlassian.bitbucket.i18n.*;resolution:="optional",
+                            com.atlassian.bitbucket.commit.*;resolution:="optional",
                             *;resolution:="optional"
                         </Import-Package>
                         <Spring-Context>*</Spring-Context>
@@ -143,7 +152,7 @@
         <atlassian.spring.scanner.version>6.0.0</atlassian.spring.scanner.version>
         <atlassian-plugins-osgi-javaconfig.version>0.6.0</atlassian-plugins-osgi-javaconfig.version>
         <amps.version>9.3.3</amps.version>
-        <atlassian.plugin.key>com-atlassian-jrichards-ecohelp</atlassian.plugin.key>
+        <atlassian.plugin.key>com-trimble-tekla-teamcity-trigger-hook</atlassian.plugin.key>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>

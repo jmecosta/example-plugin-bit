@@ -1,4 +1,4 @@
-package com.atlassian.ecohelp;
+package com.trimble.tekla;
 
 import com.atlassian.bitbucket.i18n.I18nService;
 import com.atlassian.bitbucket.project.ProjectService;

@@ -16,7 +16,16 @@
 
     <rest key="rest-key" path="/teamcity" version="1.0" >
         <description>Teamcity Resource Class</description>
-        <package>com.atlassian.ecohelp.rest</package>
+        <package>com.trimble.tekla.rest</package>
     </rest>    
+
+    <repository-merge-check key="are-builds-in-queue" name="No queued builds in Teamcity"
+                            class="com.trimble.tekla.AreBuildsInQueueOrRunningCheck" configurable="true">
+        <description>Prevent merge if builds are queued</description>
+        <icon>icons/tc-hook.png</icon>
+        <scopes>
+            <scope>repository</scope>
+        </scopes>
+    </repository-merge-check>    
 
 </atlassian-plugin>
